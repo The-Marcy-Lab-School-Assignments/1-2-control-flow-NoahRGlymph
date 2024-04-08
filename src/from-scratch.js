@@ -45,26 +45,28 @@ happyBirthdayPet('rabbit', 2); // Output: Happy birthday!
 
 
 const funTypes = (jsType) => {
-  if (typeof jsType === 'string') {
-      console.log("That's just some text.");
-  } else if (typeof jsType === 'number') {
-      console.log("That's a good number.");
-  } else if (typeof jsType === 'boolean') {
-      console.log("To bool, or not to bool?");
-  } else if (typeof jsType === 'undefined') {
-      console.log("Nothing, but I didn't set that.");
-  } else if (jsType === null) {
-      console.log("Nothing, and I did set that.");
-  } else if (typeof jsType === 'object') {
-      if (Array.isArray(jsType)) {
-          console.log("I order you to be indexed.");
-      } else {
-          console.log("Anybody got the key?");
-      }
-  } else if (isNaN(jsType)) {
+    if (isNaN(jsType)) {
       console.log("Well, now you're just showing off.");
-  }
-};
+    } else if (typeof jsType === 'string') {
+      console.log("That's just some text.");
+    } else if (typeof jsType === 'number') {
+      console.log("That's a good number.");
+    } else if (typeof jsType === 'boolean') {
+      console.log("To bool, or not to bool?");
+    } else if (typeof jsType === 'undefined') {
+      console.log("Nothing, but I didn't set that.");
+    } else if (jsType === null) {
+      console.log("Nothing, and I did set that.");
+    } else if (typeof jsType === 'object') {
+      if (Array.isArray(jsType)) {
+        console.log("I order you to be indexed.");
+      } else {
+        console.log("Anybody got the key?");
+      }
+    }
+  };
+  
+  
 funTypes("Hello"); // Output: That's just some text.
 funTypes(42); // Output: That's a good number.
 funTypes(true); // Output: To bool, or not to bool?

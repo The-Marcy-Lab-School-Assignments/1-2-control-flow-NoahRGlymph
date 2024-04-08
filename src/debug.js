@@ -6,7 +6,7 @@ console.log(getRandomIntInRange(5, 10)); // Output: Random integer between 5 and
 console.log(getRandomIntInRange(10, 20)); // Output: Random integer between 10 and 19 (inclusive)
 
 const coolnessGauge = (numOfFridges) => {
-  return numOfFridges > 5 ? 'You are downright chilly!' : 'You need more fridges.'; // Reversed the return values
+  return numOfFridges > 3 ? 'You are downright chilly!' : 'You need more fridges.'; // Reversed the return values
 };
 console.log(coolnessGauge(3)); // Output: 'You need more fridges.'
 console.log(coolnessGauge(8)); // Output: 'You are downright chilly!'
@@ -14,13 +14,13 @@ console.log(coolnessGauge(8)); // Output: 'You are downright chilly!'
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
     console.log('No pops? Maybe try one.');
-  } else if (numOfFunkoPops > 20) {
+  } else if (numOfFunkoPops > 20 && numOfFunkoPops <= 30) {
     console.log('You need help!');
-  } else if (numOfFunkoPops > 10) {
+  } else if (numOfFunkoPops > 10 && numOfFunkoPops <= 20) {
     console.log('You have a problem.');
-  } else if (numOfFunkoPops >= 1) {
+  } else if (numOfFunkoPops >= 1 && numOfFunkoPops <= 10) {
     console.log('Only a few? Keep having fun!');
-  } else {
+  } else if (numOfFunkoPops > 30) { 
     console.log('You need an intervention!!!');
   }
 };
@@ -31,8 +31,11 @@ const getWeatherReport = (temperature) => {
   if (temperature > 90) {
     weatherReport = "It's hot and gross out.";
     console.log(weatherReport);
-  } else if (temperature > 70) {
+  } else if (temperature >= 70) {
     weatherReport = "At least it's a dry heat.";
+    console.log(weatherReport);
+  } else if (temperature >= 32 && temperature < 70) {
+    weatherReport = "It's not too bad!";
     console.log(weatherReport);
   } else if (temperature < 32) {
     weatherReport = "Wow, it's cold out.";
@@ -44,7 +47,8 @@ const getWeatherReport = (temperature) => {
 };
 
 const returnPositiveNegativeZero = (num) => {
-  return num === 0 ? "Zero" : num < 0 ? "Negative" : "Positive";
+  if (num === 0) return 'Zero';
+  return (num < 1) ? 'Negative' : 'Positive';
 };
 
 module.exports = {

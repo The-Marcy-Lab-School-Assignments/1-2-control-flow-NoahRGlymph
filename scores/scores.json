@@ -33,30 +33,30 @@
   },
   "testScores": {
     "From Scratch Tests": {
-      "FrScTe1": 0,
-      "FrScTe2": 0,
+      "FrScTe1": 1,
+      "FrScTe2": 1,
       "FrScTe3": 0,
-      "FrScTe4": 0,
-      "FrScTe5": 0
+      "FrScTe4": 1,
+      "FrScTe5": 1
     },
     "Modify Tests": {
-      "MoTe1": 0,
-      "MoTe2": 0
+      "MoTe1": 1,
+      "MoTe2": 1
     },
     "Debug Tests": {
-      "DeTe1": 0,
-      "DeTe2": 0,
-      "DeTe3": 0,
-      "DeTe4": 0,
-      "DeTe5": 0,
-      "DeTe6": 0,
-      "DeTe7": 0
+      "DeTe1": 1,
+      "DeTe2": 1,
+      "DeTe3": 1,
+      "DeTe4": 1,
+      "DeTe5": 1,
+      "DeTe6": 1,
+      "DeTe7": 1
     }
   },
   "humanReadable": {
-    "From Scratch Tests": "0/5",
-    "finalTestScore": "FINAL SCORE: 0/14",
-    "Modify Tests": "0/2",
-    "Debug Tests": "0/7"
+    "From Scratch Tests": "4/5",
+    "finalTestScore": "FINAL SCORE: 13/14",
+    "Modify Tests": "2/2",
+    "Debug Tests": "7/7"
   }
 }
